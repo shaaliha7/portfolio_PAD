@@ -45,7 +45,7 @@
 
         nav {
             background-color: var(--bg-dark);
-            padding: 10px 5%; /* Mengurangi padding vertikal */
+            padding: 10px 5%;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -108,7 +108,7 @@
             background-size: 400% 400%;
             animation: gradientAnimation 10s ease infinite;
             color: #fff;
-            min-height: 80vh; /* Mengurangi tinggi minimum */
+            min-height: 80vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -116,7 +116,7 @@
             position: relative;
             overflow: hidden;
             text-shadow: 0 2px 4px rgba(0,0,0,0.2);
-            padding: 60px 5%; /* Menyesuaikan padding atas/bawah */
+            padding: 60px 5%;
         }
 
         @keyframes gradientAnimation {
@@ -142,12 +142,12 @@
 
         .hero-text-container {
             background-color: rgba(255, 255, 255, 0.2);
-            padding: 30px 40px; /* Mengurangi padding */
+            padding: 30px 40px;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
             max-width: 800px;
-            margin-top: 10px; /* Mengurangi margin atas */
-            margin-bottom: 30px; /* Mengurangi margin bawah */
+            margin-top: 10px;
+            margin-bottom: 30px;
             color: var(--text-light);
             text-align: center;
             position: relative;
@@ -381,7 +381,17 @@
             padding: 80px 5%;
         }
 
-        .project-grid, .organization-grid {
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .organization-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
@@ -813,6 +823,12 @@
             }
         }
 
+        @media (max-width: 1199px) {
+            .project-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
         @media (max-width: 1024px) {
             #about .about-content {
                 max-width: 1000px;
@@ -820,6 +836,12 @@
             .text-content {
                 max-width: 900px;
                 padding: 35px;
+            }
+        }
+
+        @media (max-width: 899px) {
+            .project-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 
@@ -833,10 +855,10 @@
             }
 
             .hero-text-container {
-                padding: 20px 15px; /* Lebih mengurangi padding */
+                padding: 20px 15px;
                 max-width: 90%;
-                margin-top: 10px; /* Lebih mengurangi margin */
-                margin-bottom: 20px; /* Lebih mengurangi margin */
+                margin-top: 10px;
+                margin-bottom: 20px;
             }
             .hero-text-container p {
                 font-size: 0.95em;
@@ -914,7 +936,10 @@
                 width: 100%;
             }
 
-            .project-grid, .organization-grid {
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+            .organization-grid {
                 grid-template-columns: 1fr;
             }
             
@@ -1138,6 +1163,19 @@
                 <div class="project-info">
                     <h3>Desain Prototipe Aplikasi Travel Online</h3>
                     <p>Mendesain prototipe aplikasi travel online dengan fokus pada pengalaman pengguna (UX) yang mulus dan antarmuka (UI) yang menarik, mencakup fitur pencarian, pemesanan, dan manajemen perjalanan. Membuat wireframe, mockup, dan prototipe interaktif menggunakan Figma.</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image-container">
+                    <img src="images/yoan.jpg" alt="Slot Kosong">
+                    <div class="image-overlay">
+                        <span>+</span>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Identitas Visual Yoan Griya Batik</h3>
+                    <p>Yoan Griya Batik merupakan brand fashion yang menonjolkan kemewahan batik dalam konsep visual modern. Logo dirancang dengan huruf "y" sebagai simbol ketangguhan, serta motif bunga yang melambangkan keindahan, kebahagiaan, dan kemurnian. Warna coklat dipilih untuk menciptakan kesan hangat, nyaman, dan elegan saat berbelanja.
+                    Desain ini mencakup logo utama, kemasan (paper bag), kartu nama, dan poster promosi, semuanya dikemas dalam identitas visual yang konsisten, profesional, dan berkelas.</p>
                 </div>
             </div>
         </div>
