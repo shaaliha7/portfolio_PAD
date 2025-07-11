@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Siti Noor Shaliha - Portofolio Shaliha 2025</title>
+    <title>Siti Noor Shaliha - Shaliha Portfolio 2025</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -221,7 +221,7 @@
         #contact .section-title::after {
             background-color: var(--accent-color);
         }
-        
+
         #about, #education {
             background-color: var(--bg-light);
             padding: 80px 5%;
@@ -376,7 +376,7 @@
             font-size: 1.1em;
         }
 
-        #projects, #organization, #relawan {
+        #projects, #organization, #relawan, #achievements {
             background-color: #e6f7ff;
             padding: 80px 5%;
         }
@@ -401,21 +401,27 @@
             margin-right: auto;
         }
 
-        .relawan-grid {
+        .relawan-grid, .achievements-grid {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
-            align-items: center;
+            align-items: stretch;
+            gap: 30px;
             margin-top: 40px;
-            max-width: 100%;
+            max-width: 1200px;
             margin-left: auto;
             margin-right: auto;
             padding: 0 5%;
             box-sizing: border-box;
         }
 
-        .relawan-grid .organization-card {
+        .relawan-grid .organization-card,
+        .achievements-grid .organization-card {
+            flex: 1 1 300px;
             max-width: 380px;
-            width: 100%;
+            display: flex;
+            flex-direction: column;
+            height: auto;
         }
 
         .project-card, .organization-card {
@@ -452,6 +458,9 @@
 
         .project-info, .organization-info {
             padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
         }
 
         .project-info h3, .organization-info h3 {
@@ -465,6 +474,7 @@
             font-size: 0.95em;
             color: #555;
             font-family: 'Poppins', sans-serif;
+            flex-grow: 1;
         }
 
         #experience, #education {
@@ -942,13 +952,17 @@
             .organization-grid {
                 grid-template-columns: 1fr;
             }
-            
-            .relawan-grid {
+
+            .relawan-grid, .achievements-grid {
                 padding: 0;
+                flex-direction: column;
+                align-items: center;
             }
 
-            .relawan-grid .organization-card {
-                max-width: 100%;
+            .relawan-grid .organization-card,
+            .achievements-grid .organization-card {
+                max-width: 90%;
+                width: 100%;
             }
 
             .timeline::before {
@@ -1027,6 +1041,7 @@
             <a href="#hero">Home</a>
             <a href="#about">About Me</a>
             <a href="#education">Education</a>
+            <a href="#achievements">Achievements</a>
             <a href="#projects">Projects</a>
             <a href="#experience">Experience</a>
             <a href="#organization">Organization</a>
@@ -1094,9 +1109,11 @@
                     <h3>STMIK Triguna Dharma</h3>
                     <p class="company">S1 Information Systems | GPA: 3.78/4.00</p>
                     <p class="duration">Oct 2023 – Present</p>
-                    <p>Designed 2 application prototypes (Travel & E-commerce) from needs analysis to UI/UX design.</p>
-                    <p>Develop web applications using HTML, CSS, JS, PHP, and MySQL.</p>
-                    <p>Manage 180 lecturer journals through the OJS system (editing, metadata, and submit).</p>
+                    <p>• Business Analyst Project – Pilmapres 2025 Campus Representative</p>
+                    <p>• Designed 2 application prototypes (Travel & E-commerce) from needs analysis to UI/UX design.</p>
+                    <p>• Develop web applications using HTML, CSS, JS, PHP, and MySQL.</p>
+                    <p>• Manage 180 lecturer journals through the OJS system (editing, metadata, and submit).</p>
+                    
                 </div>
                 <div class="timeline-item-marker"></div>
             </div>
@@ -1106,10 +1123,29 @@
                     <h3>SMK Istiqlal</h3>
                     <p class="company">Office Automation and Governance</p>
                     <p class="duration">Jul 2019 - June 2022</p>
-                    <p>4-month internship in a government agency, completing 100+ administrative archives.</p>
-                    <p>Corporate Information System Governance Certification by PT. Tractor Nusantara.</p>
+                    <p>• 4-month internship in a government agency, completing 100+ administrative archives.</p>
+                    <p>• Corporate Information System Governance Certification by PT. Tractor Nusantara.</p>
                 </div>
                 <div class="timeline-item-marker"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="achievements">
+        <h2 class="section-title">Achievements</h2>
+        <div class="achievements-grid">
+            <div class="organization-card">
+                <div class="organization-image-container">
+                    <img src="images/PILMAPRES.JPG" alt="Pilmapres 2025 Campus Representative">
+                    <div class="image-overlay">
+                        <span>+</span>
+                    </div>
+                </div>
+                <div class="organization-info">
+                    <h3>Pilmapres 2025 Campus Representative</h3>
+                    <p><strong>Product Based Problem Solving Proposal</strong></p>
+                    <p>As the campus representative in Pilmapres 2025, I proposed a creative idea titled "Product Based Problem Solving Proposal". This proposal focuses on developing product-based solutions to address real problems with an innovative and measurable approach, combining needs analysis, design, and effective product implementation strategies.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -1119,7 +1155,7 @@
         <div class="project-grid">
             <div class="project-card">
                 <div class="project-image-container">
-                    <img src="images/MARKETPLACE.png" alt="Project E-commerce">
+                    <img src="images/MARKETPLACE.png" alt="E-commerce Project">
                     <div class="image-overlay">
                         <span>+</span>
                     </div>
@@ -1131,7 +1167,7 @@
             </div>
             <div class="project-card">
                 <div class="project-image-container">
-                    <img src="images/JURNAL.jpg" alt="Project Jurnal">
+                    <img src="images/JURNAL.jpg" alt="Journal Project">
                     <div class="image-overlay">
                         <span>+</span>
                     </div>
@@ -1142,7 +1178,8 @@
                 </div>
             </div>
             <div class="project-card">
-                <div class="project-image-container">                    <img src="images/TRAVEL.png" alt="Project Travel Online">
+                <div class="project-image-container">
+                    <img src="images/TRAVEL.png" alt="Online Travel Project">
                     <div class="image-overlay">
                         <span>+</span>
                     </div>
@@ -1192,7 +1229,7 @@
 
             <div class="timeline-item left">
                 <div class="timeline-item-content">
-                    <h3>Member of Infocom Division</h3>
+                    <h3>Member of Infocomm Division</h3>
                     <p class="company"><strong>Cyber Programming Club STMIK Triguna Dharma</strong></p>
                     <p class="duration">April 2024 - Present</p>
                     <p>Assisted in the creation and dissemination of publication content on social media and documentation of internal organizational activities. Learned and contributed to graphic design and visual content creation using CorelDRAW and Canva. Supported the management of the division's internal information systems and participated in the development of basic web programming skills.</p>
@@ -1240,15 +1277,15 @@
             </div>
             <div class="organization-card">
                 <div class="organization-image-container">
-                    <img src="images/SEMINARLDK.jpg" alt="Seminar Peaching and Technology LDK">
+                    <img src="images/SEMINARLDK.jpg" alt="Seminar Preaching and Technology LDK">
                     <div class="image-overlay">
                         <span>+</span>
                     </div>
                 </div>
                 <div class="organization-info">
-                    <h3>Peaching and Technology LDK Seminar</h3>
+                    <h3>Preaching and Technology LDK Seminar</h3>
                     <p><strong>Committee</strong></p>
-                    <p>Contributed as a committee member in organizing the Peaching and Technology LDK Seminar, ensuring the smooth running of the event and supporting the needs of participants and speakers.</p>
+                    <p>Contributed as a committee member in organizing the Preaching and Technology LDK Seminar, ensuring the smooth running of the event and supporting the needs of participants and speakers.</p>
                 </div>
             </div>
             <div class="organization-card">
@@ -1285,7 +1322,7 @@
                     </div>
                 </div>
                 <div class="organization-info">
-                    <h3>Project UI/UX Market Place STMIK Triguna Dharma</h3>
+                    <h3>UI/UX Marketplace Project STMIK Triguna Dharma</h3>
                     <p><strong>Best Project</strong></p>
                     <p>A comprehensive project focused on the UI/UX design of the TGD marketplace. This initiative aims to deliver a highly user-friendly and aesthetically pleasing platform that effectively meets the needs and expectations of its target audience.</p>
                 </div>
@@ -1319,7 +1356,20 @@
             <div class="organization-info">
                 <h3>KIP-Kuliah 2025 Volunteer</h3>
                 <p><strong>Education Volunteer at Rumah Tahfidz Al Fazz</strong></p>
-                <p>Acted as a volunteer for the KIP-Kuliah 2025 program, providing guidance and assistance to prospective students in the registration process, fulfilling requirements, and understanding scholarship-related information for higher education.</p>
+                <p>As a dedicated volunteer for the KIP-Kuliah 2025 program, I wholeheartedly devoted myself to guiding and inspiring aspiring students throughout their journey toward higher education. More than just assisting with registration and scholarship information, our mission was to ignite a spark of hope, courage, and ambition in the hearts of those who dared to dream. We stood beside them not only as facilitators but as mentors and motivators, believing that no dream is too big and no background too humble to reach the doors of a university. With each word of encouragement and every step of support, we aimed to break the cycle of doubt and limitations—reminding them that education is not a privilege for the few, but a right for all.</p>
+            </div>
+        </div>
+        <div class="organization-card">
+            <div class="organization-image-container">
+                <img src="images/PM.jpg" alt="Community Service Activity">
+                <div class="image-overlay">
+                    <span>+</span>
+                </div>
+            </div>
+            <div class="organization-info">
+                <h3>Community Service Activity</h3>
+                <p><strong>Assistance for Rebranding Home-Based Tofu Products</strong></p>
+                <p>Embarked on a transformative community service initiative in Desa Kuta Tualah, Deli Serdang Regency, focusing on empowering local UMKM (MSMEs) by rebranding home-based tofu products. This project, themed 'Assistance for Rebranding Home-Based Tofu Products Through Packaging Design and Social Media Optimization,' provided comprehensive guidance on crafting visually appealing and market-competitive packaging, as well as strategies for maximizing online presence through social media. By fostering innovative design and digital marketing skills, we aimed to significantly enhance product appeal, broaden market reach, and ultimately drive sustainable economic growth for the tofu producers, turning traditional craftsmanship into a vibrant, modern enterprise.</p>
             </div>
         </div>
     </div>
